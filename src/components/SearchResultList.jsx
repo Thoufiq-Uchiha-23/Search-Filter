@@ -1,10 +1,11 @@
+import SearchResult from "./SearchResult.jsx"
 import "./SearchResultList.css"
 
 const SearchResultList = ({results}) => {
   return (
     <div className="results-list">
       {results.map((result, id) => {
-        return <div key={id}>{result.name}</div>
+        return <SearchResult key={id} result={result}/>
       })}
     </div>
   )
